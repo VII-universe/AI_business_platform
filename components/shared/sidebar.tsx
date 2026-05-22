@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import {
   LayoutDashboard, Palette, FileText, Megaphone, Users,
-  Zap, BarChart2, Settings, Brain, Sparkles, ChevronRight,
+  Zap, BarChart2, Settings, Brain, Sparkles, ChevronRight, Bot,
 } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
 
@@ -16,6 +16,7 @@ const navItems = [
   { href: '/campaigns', label: 'Campaigns', icon: Megaphone },
   { href: '/crm', label: 'CRM & Leads', icon: Users },
   { href: '/automations', label: 'Automations', icon: Zap },
+  { href: '/agent-builder', label: 'Agent Builder', icon: Bot },
   { href: '/reports', label: 'Reports', icon: BarChart2 },
 ]
 
