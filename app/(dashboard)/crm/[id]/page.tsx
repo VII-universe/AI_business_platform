@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
-  ArrowLeft, Mail, Phone, Globe, Linkedin, Brain,
+  ArrowLeft, Mail, Phone, Globe, Brain,
   TrendingUp, Calendar, FileText, CheckSquare,
-  MessageSquare, Clock, Star, Building2, Edit2,
+  MessageSquare, Clock, Star, Edit2,
 } from 'lucide-react'
 
 const LEADS: Record<string, {

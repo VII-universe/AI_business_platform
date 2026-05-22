@@ -491,7 +491,7 @@ export default function DashboardPage() {
                   <Pie data={AI_COSTS} cx="50%" cy="50%" innerRadius={30} outerRadius={52} dataKey="value" strokeWidth={2} stroke="transparent">
                     {AI_COSTS.map((entry, i) => <Cell key={i} fill={entry.color} />)}
                   </Pie>
-                  <Tooltip formatter={(v: number) => [`$${v.toFixed(2)}`, '']} />
+                  <Tooltip formatter={(v: unknown) => [`$${(v as number).toFixed(2)}`, '']} />
                 </PieChart>
               </ResponsiveContainer>
             </div>

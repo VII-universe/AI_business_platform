@@ -470,9 +470,7 @@ export default function ContentPage() {
               const t = TYPES.find(x => x.type === item.type)
               return (
                 <div key={i} className="flex items-center gap-5 py-4 group">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: t ? undefined : undefined }}
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${t?.bg ?? 'bg-gray-100 dark:bg-white/[0.07]'}`}>
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${t?.bg ?? 'bg-gray-100 dark:bg-white/[0.07]'}`}>
                     {t && (() => { const Icon = t.icon; return <Icon className={`w-4 h-4 ${t.color}`} /> })()}
                   </div>
                   <div className="flex-1 min-w-0">

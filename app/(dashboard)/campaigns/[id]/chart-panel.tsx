@@ -205,7 +205,7 @@ export function ChartPanel({ daily }: { daily?: unknown[] }) {
                 tickLine={false} axisLine={false}
                 tick={{ fontSize: 10, fill: '#9ca3af' }}
                 tickFormatter={yFmt}
-                width={period === 'spend' ? 50 : 42}
+                width={metric === 'spend' ? 50 : 42}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: `${m.color}10`, radius: 6 }} />
               <Bar
@@ -215,7 +215,7 @@ export function ChartPanel({ daily }: { daily?: unknown[] }) {
                 maxBarSize={period === '1y' ? 28 : period === '3m' ? 56 : period === '1m' ? 80 : 52}
                 label={{
                   position: 'top', fontSize: 10, fill: '#9ca3af',
-                  formatter: (v: number) => m.fmt(v),
+                  formatter: (v: unknown) => m.fmt(typeof v === 'number' ? v : 0),
                 }}
               />
             </ComposedChart>
